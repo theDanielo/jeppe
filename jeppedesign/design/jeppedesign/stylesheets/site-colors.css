@@ -1,0 +1,20 @@
+div#usermenu {
+    background-color: #ea3131;
+    background-image: none;
+    height: 23px;
+}
+ 
+div#usermenu a {
+    border-left: medium none;
+    color: #fff;
+    font-size: 10px;
+}
+ 
+div#header {
+    height: 150px;
+    padding: 0;
+}
+ 
+div#languages, div#links {
+    background: none;
+}

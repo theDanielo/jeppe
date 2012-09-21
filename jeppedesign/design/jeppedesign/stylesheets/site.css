@@ -1,0 +1,79 @@
+
+
+body {
+    background-image:url('/extension/jeppedesign/design/jeppedesign/images/background.png');
+   /* background:  repeat scroll 0 0 #f1ece0;*/
+   /* color: #FFFFFF; */
+    font: 14px/20px georgia,times,"Times New Roman",serif;
+    text-align: center;
+	
+	
+	
+    color: #6E6E6E;
+   
+    height: 100%;
+    margin: 0;
+   /* overflow: visible;*/
+    padding: 0;
+    width: 100%;
+}
+
+#allcontent {
+	margin: 0 auto;
+    text-align: left;
+    width: 960px;
+}
+
+#top_logo_img {
+	height: 130px;
+	float: left;
+}
+#topmenu  {
+	float: right;
+}
+#topmenu-design {
+	float: right;
+}
+#topmenu-design ul {
+	display: inline;
+    float: right;
+    height: 101px;
+    margin: 0 0 0 23px;
+    width: 617px;
+	list-style: none outside none;
+}
+#topmenu-design li {
+	float: left;
+	text-transform: uppercase;
+	margin-left: 20px;
+}
+#topmenu-design li a {
+	text-decoration: none;
+	color: #583225;
+}
+#topmenu-design li a:hover, .selected {
+	color: #75655a;
+	border-bottom:1px solid black;
+}
+
+.frontpage_maincontent {
+	width: 70%;
+	float: left;
+}
+.frontpage_rightcontent {
+	width: 27%;
+	float: right;
+	padding-left: 10px;
+}
+
+#footer {
+	clear: both;
+	float: left;
+}
+.hide {
+	display: none;
+}
+
+.article .frontpage_maincontent {
+	width: 90%;
+}
