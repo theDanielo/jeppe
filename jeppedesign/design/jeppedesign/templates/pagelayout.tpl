@@ -39,38 +39,57 @@ div#maincontent-design { width: 100%; } /* This is needed to avoid width bug in 
 {include uri="design:page_head.tpl"}
 <!--END PAGE_HEAD -->
 </head>
-{default current_user=fetch('user','current_user')}
+{*default current_user=fetch('user','current_user')*}
 
 <body>
-
+<div id="display">
+<div id="left_content">
+    <img src={"images/elg.png"|ezdesign} alt="ELG" />
+</div>
 <div id="allcontent">
-{cache-block keys=$uri_string}
+{*cache-block keys=$uri_string*}
     <div id="topcontent">
         
         
         <div id="header">
             <div id="header-design">
-                <img src={"images/logo.png"|ezdesign}  alt="Jeppehuset"  id="top_logo_img" />
-                    <h1><a href="/">hola</a></h1>
+                <a href="/"><img src={"images/logo.png"|ezdesign}  alt="Jeppehuset"  id="top_logo_img" /></a>
             </div>
-        
-        
-
-
-
-
-
-    {menu name=TopMenu}
-
+            <div id="menu">
+                <ul>
+                    <li>
+                        <a href="/index.php/Meny">
+                            <img src={"images/menu_menu.png"|ezdesign}  alt="Menu" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/index.php/Galleri">
+                            <img src={"images/manu_gallery.png"|ezdesign}  alt="Galleri" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/index.php/Kontakt">
+                            <img src={"images/menu_contact.png"|ezdesign}  alt="Kontakt" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/index.php/Program">
+                            <img src={"images/menu_program.png"|ezdesign}  alt="Program" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+      
+    {*menu name=TopMenu*}
     </div>
-{/cache-block}
-    <div id="path">
+{*/cache-block*}
+    <!-- <div id="path">
         <div id="path-design">
-            {include uri="design:parts/path.tpl"}
+            {*include uri="design:parts/path.tpl"*}
         </div>{* id="path-design" *}
     </div>{* id="path" *}
-
-    {cache-block keys=array($uri_string, $current_user.role_id_list|implode( ',' ), $current_user.limited_assignment_value_list|implode( ',' ))}
+    -->
+    {*cache-block keys=array($uri_string, $current_user.role_id_list|implode( ',' ), $current_user.limited_assignment_value_list|implode( ',' ))*}
     <hr class="hide" />
 
     <div id="columns">
@@ -78,10 +97,10 @@ div#maincontent-design { width: 100%; } /* This is needed to avoid width bug in 
         {*menu name=LeftMenu*}
 
        
-    {/cache-block}
-    {/default}
+    {*/cache-block*}
+    {*/default*}
 
-        {cache-block}
+        {*cache-block*}
             {let maincontentstyle='maincontent-bothmenus'}
 
             {if eq(ezini('SelectedMenu','LeftMenu','menu.ini'),'')}
@@ -101,7 +120,7 @@ div#maincontent-design { width: 100%; } /* This is needed to avoid width bug in 
                     <div id="maincontent-design">
             {/let}
 
-        {/cache-block}
+        {*/cache-block*}
 
 {def $the_node=fetch( 'content', 'node', hash( 'node_id', $module_result.node_id ) )}
 
@@ -147,19 +166,25 @@ div#maincontent-design { width: 100%; } /* This is needed to avoid width bug in 
         </div>{* id="toolbar-bottom" *}
     {/if}
 
-    <div id="footer">
-        <div id="footer-design">
-
-            <address>{"Powered by %linkStartTag eZ Publish&reg; open source content management system %linkEndTag and development framework."|i18n("design/base",,hash('%linkStartTag',"<a href='http://ez.no'>",'%linkEndTag',"</a>" ))}<br />{ezini('SiteSettings','MetaDataArray','site.ini').copyright}
-            </address>
-
-        </div>{* id="footer-design" *}
-    </div>{* id="footer" *}
+    
 
     <div class="break"></div>
 </div>{* id="allcontent" *}
 
-<!--DEBUG_REPORT-->
+</div>
+<div id="right_content">
+    <img src={"images/basilikum.png"|ezdesign} alt="Basilikum" />
+</div>
 
+<div id="footer">
+        <div id="footer-design">
+            <img src={"images/laks.png"|ezdesign} alt="Basilikum" />
+            <a href="http://www.facebook.com" >
+                <img id="img_facebook" src={"images/facebook.png"|ezdesign} />
+            </a>
+
+        </div>{* id="footer-design" *}
+    </div>{* id="footer" *}
+</div>
 </body>
 </html>
